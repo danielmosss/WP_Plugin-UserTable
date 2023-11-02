@@ -1,0 +1,34 @@
+/* Add to your theme's stylesheet or a custom CSS file */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Add to your theme's stylesheet or a custom CSS file */
+.dataTables_wrapper {
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 20px;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info {
+    margin-bottom: 20px;
+}
+
+#user-table_length label {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 10px;
+}
+
+#user-table_paginate{
+    margin: 0;
+    padding-top: 0;
+}
