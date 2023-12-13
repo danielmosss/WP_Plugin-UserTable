@@ -2,7 +2,7 @@
 /*
 Plugin Name: User Table Display
 Description: Display a sortable table of WordPress users.
-Version: 1.0
+Version: 1.1
 Author: Daniël Mosselman
 */
 
@@ -21,7 +21,7 @@ function display_user_table() {
             $user_info = get_userdata($user->ID);
 
             $role = $user_info->roles[0];
-            $role_translation = translateRoles($role);
+            $role_translation = translateRoles($role, $user_info->user_login);
 
             // get user info and display name
             $first_name = $user_info->first_name;
@@ -49,7 +49,11 @@ function display_user_table() {
     }
 }
 
-function translateRoles($userrole){
+function translateRoles($userrole, $username){
+    if ($username == 'MosselmanSoftware') {
+        return 'Ontwikkelaar';
+    }
+
     $roles = array(
         'administrator' => 'Bestuur',
         'editor' => 'Redacteur',
